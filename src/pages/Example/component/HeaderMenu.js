@@ -38,7 +38,7 @@ const HeaderMenu = ({ title, comRight, isImage }) => {
         />
       )}
 
-      <>{comRight}</>
+      {/* <>{comRight}</> */}
     </View>
   );
 };
