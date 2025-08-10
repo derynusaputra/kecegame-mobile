@@ -3,16 +3,18 @@ import { Icon } from "@rneui/base";
 import { COLOR } from "@src/constans/colors";
 import { sizes } from "@src/constans/sizes";
 import { FONTS, IMAGES } from "@src/constans/theme";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 // import { COLOR } from "@src/constants/colors";
 // import Gap from "@src/components/Gap/Gap";
 // import { sizes } from "@src/constants/sized";
 // import { FONTS, IMAGES } from "@src/constants/theme";
 
 function BottomTab({ state, descriptors, navigation }) {
+  const inset = useSafeAreaInsets();
   return (
     <View
       style={{
-        height: sizes(50),
+        height: sizes(50) + inset.bottom,
         flexDirection: "row",
         // position: "absolute",
         width: "auto",
@@ -52,8 +54,8 @@ function BottomTab({ state, descriptors, navigation }) {
         return (
           <Pressable
             style={{
-              height: sizes(50),
-              width: sizes(125),
+              height: sizes(50) + inset.bottom,
+              width: sizes(187.5),
               // flex: 1,
               alignItems: "center",
               justifyContent: "center",
@@ -75,8 +77,8 @@ function BottomTab({ state, descriptors, navigation }) {
                 name={
                   label === "Quis 1"
                     ? "clipboard"
-                    : label === "Quis 2"
-                    ? "reader"
+                    : label === "Tips & Tricks"
+                    ? "reader-outline"
                     : "person"
                 }
                 size={sizes(18)}

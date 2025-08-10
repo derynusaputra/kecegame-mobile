@@ -24,7 +24,7 @@ const DetailAnswer = ({ route }) => {
       backgroundColor={COLOR?.white}
     >
       <NavigateHeader
-        title={"My Answer"}
+        title={"Detail"}
         styles={{
           backgroundColor: COLOR?.white,
         }}

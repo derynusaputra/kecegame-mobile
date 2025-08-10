@@ -16,15 +16,15 @@ const MainNavigator = () => {
         options={{ headerShown: false }}
       />
       <Tab.Screen
-        name="Quis 2"
+        name="Tips & Tricks"
         component={ExamplePage}
         options={{ headerShown: false }}
       />
-      <Tab.Screen
+      {/* <Tab.Screen
         name="Profile"
         component={Profile}
         options={{ headerShown: false }}
-      />
+      /> */}
     </Tab.Navigator>
   );
 };

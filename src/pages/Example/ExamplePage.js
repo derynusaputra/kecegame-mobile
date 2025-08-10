@@ -11,184 +11,64 @@ import CardQuestion from "./component/CardQuestion";
 const dataKuis = [
   {
     id: 1,
-    name: "1. JSON Array Object (Bebas)",
-    answer: `const users = [
-  { id: 1, name: 'Andi', age: 25 },
-  { id: 2, name: 'Budi', age: 30 },
-  { id: 3, name: 'Cici', age: 22 },
-];`,
+    name: "Cara Menjadi Gamer yang Baik",
+    answer: `Mulai dari dasar: tentukan tujuan main (hiburan, kompetitif, konten). Bangun kebiasaan sehat—pemanasan jari, atur postur, istirahat tiap 60–90 menit.
+Buat jadwal main yang konsisten, catat progres (rank, KDA, aim training), dan evaluasi mingguan. Jaga etika: jangan toxic, hormati tim, belajar dari kekalahan.`,
   },
   {
     id: 2,
-    name: "2. Tampilkan Label dan Tombol untuk Mengubah Value",
-    answer: `import React, { useState } from 'react';
-import { View, Text, Button } from 'react-native';
-
-const JsonLabel = () => {
-  const users = [
-    { id: 1, name: 'Andi', age: 25 },
-    { id: 2, name: 'Budi', age: 30 },
-    { id: 3, name: 'Cici', age: 22 },
-  ];
-  const [index, setIndex] = useState(0);
-
-  const changeName = () => {
-    setIndex((prev) => (prev + 1) % users.length);
-  };
-
-  return (
-    <View>
-      <Text>Nama: {users[index].name}</Text>
-      <Button title="Ganti Nama" onPress={changeName} />
-    </View>
-  );
-};`,
+    name: "Cara Menyiapkan Perangkat & Koneksi",
+    answer: `Pastikan HP minimal RAM 4–6 GB dan penyimpanan lega. Matikan sync/unduhan saat main, aktifkan mode performa/game mode.
+Stabilkan jaringan: pakai Wi-Fi 5/6 atau seluler 4G/5G dengan ping < 50 ms. Tutup aplikasi latar belakang, aktifkan “Low Latency Mode” bila ada.`,
   },
   {
     id: 3,
-    name: "3. HTTP Request ke URL dan Log Responsenya",
-    answer: `useEffect(() => {
-  fetch('http://jsonplaceholder.typicode.com/posts')
-    .then(res => res.json())
-    .then(data => {
-      console.log("Data fetched:", data);
-    })
-    .catch(err => console.error(err));
-}, []);`,
+    name: "Cara Mengatur Kontrol & Sensitivitas",
+    answer: `Gunakan layout kustom: posisikan tombol tembak, scope, lompat, crouch agar mudah dijangkau.
+Atur sensitivitas gyro/kamera bertahap (naik 5–10 poin), uji di Training Ground. Simpan beberapa preset (agresif/defensif) dan evaluasi recoil/turn speed.`,
   },
   {
     id: 4,
-    name: "4. Cetak Data ke Dalam Tabel (10 Data Maks)",
-    answer: `import React, { useEffect, useState } from 'react';
-import { View, Text, FlatList, StyleSheet } from 'react-native';
-
-const PostTable = () => {
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    fetch('http://jsonplaceholder.typicode.com/posts')
-      .then(res => res.json())
-      .then(data => setPosts(data.slice(0, 10)))
-      .catch(err => console.error(err));
-  }, []);
-
-  return (
-    <FlatList
-      data={posts}
-      keyExtractor={(item) => item.id.toString()}
-      renderItem={({ item }) => (
-        <View style={styles.row}>
-          <Text style={styles.cell}>{item.id}</Text>
-          <Text style={styles.cell}>{item.title}</Text>
-        </View>
-      )}
-    />
-  );
-};
-
-const styles = StyleSheet.create({
-  row: { flexDirection: 'row', padding: 5, borderBottomWidth: 1 },
-  cell: { flex: 1 },
-});`,
+    name: "Cara Memahami Role & Meta (Mobile Legends)",
+    answer: `Kenali tiap role: EXP, Gold, Mid, Roam, Jungle—tugas utama & timing rotasinya. Pelajari 2–3 hero inti per role (comfort picks) dan 1 counter pick.
+Ikuti patch notes/meta: prioritas objektif (Turtle/Lord), emblem/insight build, dan sinergi tim (CC chain, front-to-back).`,
   },
   {
     id: 5,
-    name: "5. Function Menghapus Salah Satu Data",
-    answer: `const removePost = (id) => {
-  setPosts((prev) => prev.filter(post => post.id !== id));
-};`,
+    name: "Cara Push Rank Efektif (Mobile Legends)",
+    answer: `Main di jam stabil (ping rendah), duo/tri dengan role pelengkap. Draft cerdas: ban hero OP, pilih counter, jangan force comfort bila komposisi timpang.
+Fokus objektif: turret > kill. Rotasi: setelah menang lane, bantu objektif, reset wave, ambil vision di semak aman.`,
   },
   {
     id: 6,
-    name: "6. Hapus Salah Satu Key dari Object",
-    answer: `const cleanedPost = { ...post };
-delete cleanedPost.body;`,
+    name: "Cara Rotasi & Zona (PUBG Mobile)",
+    answer: `Rencanakan jalur dari flight path: drop aman, loot cepat (2–3 menit), lalu rotasi ke high ground/compound aman.
+Baca zona: rotasi lebih awal (edge vs center strategy). Gunakan smoke/grenade untuk crossing, cek pintu/vehicle spawn sebagai indikator musuh.`,
   },
   {
     id: 7,
-    name: "7. Function SHA256 Hash dari String",
-    answer: `import SHA256 from 'crypto-js/sha256';
-
-const hashString = () => {
-  const input = '27062025derypriaifabula';
-  const hash = SHA256(input).toString();
-  console.log("SHA256:", hash);
-};`,
+    name: "Cara Aim & Kontrol Recoil (PUBG Mobile)",
+    answer: `Latihan harian 10–15 menit: tracking, flick, spray control di Training/TD. Mulai dengan AR (M416/Scar-L) lalu SMG/DP-28.
+Kontrol recoil: tarik vertikal halus, burst pada jarak menengah, tap untuk jarak jauh. Pilih scope sesuai jarak, atur sensitivitas ADS terpisah.`,
   },
   {
     id: 8,
-    name: "8. Debugging testdebug.html dan Identifikasi Error",
-    answer: `<!-- Sebelum (Error) -->
-<html>
-  <body>
-    <h1>Test Debug
-    <script>
-      console.log("Hello);
-    </script>
-  </body>
-</html>
-
-<!-- Sesudah (Fix) -->
-<html>
-  <body>
-    <h1>Test Debug</h1>
-    <script>
-      console.log("Hello");
-    </script>
-  </body>
-</html>
-
-<!-- Error:
-- Line 3: Tag <h1> tidak ditutup
-- Line 5: String tidak ditutup dengan tanda petik -->
-`,
+    name: "Cara Komunikasi & Teamwork",
+    answer: `Gunakan callout singkat & jelas: arah (kompas), jarak, jumlah musuh, kondisi (HP/skill/ult). Tandai lokasi (ping/marker) sebelum bicara.
+Tetapkan IGL (shotcaller). Review komunikasi pasca game: apa yang telat di-call, kapan harus reset/commit.`,
   },
   {
     id: 9,
-    name: "9. Halaman Login LocalStorage (React Native pakai AsyncStorage)",
-    answer: `import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, Button } from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-
-const LoginPage = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  useEffect(() => {
-    AsyncStorage.getItem('username').then((val) => {
-      if (val) setIsLoggedIn(true);
-    });
-  }, []);
-
-  const login = async () => {
-    await AsyncStorage.setItem('username', username);
-    await AsyncStorage.setItem('password', password);
-    setIsLoggedIn(true);
-  };
-
-  const logout = async () => {
-    await AsyncStorage.clear();
-    setIsLoggedIn(false);
-  };
-
-  return (
-    <View>
-      {!isLoggedIn ? (
-        <>
-          <TextInput placeholder="Username" onChangeText={setUsername} />
-          <TextInput placeholder="Password" onChangeText={setPassword} secureTextEntry />
-          <Button title="Login" onPress={login} />
-        </>
-      ) : (
-        <>
-          <Text>Selamat Datang, {username}</Text>
-          <Button title="Logout" onPress={logout} />
-        </>
-      )}
-    </View>
-  );
-};`,
+    name: "Cara Manajemen Waktu & Kesehatan",
+    answer: `Pakai teknik 60–90/10: main 60–90 menit, istirahat 10 menit (stretching, minum). Batasi sesi ranked saat lelah/tilted.
+Jaga hidrasi, cahaya ruangan, dan posisi duduk. Targetkan 7–8 jam tidur agar refleks & fokus terjaga.`,
+  },
+  {
+    id: 10,
+    name: "Cara Membuat Game (Garis Besar)",
+    answer: `Mulai dari konsep: genre, core loop, target platform. Buat GDD (Game Design Document) singkat.
+Pilih engine (Unity/Unreal/Godot). Bangun prototipe: 1 level, 1 mekanik inti. Lakukan playtest cepat, iterasi berdasarkan feedback.
+Belajar version control (Git), atur scope kecil dulu, rilis demo/alpha untuk validasi.`,
   },
 ];
 

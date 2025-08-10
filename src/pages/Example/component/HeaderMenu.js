@@ -24,7 +24,7 @@ const HeaderMenu = ({ title, comRight, isImage }) => {
     >
       {isImage ? (
         <FastImage
-          style={{ width: sizes(100), height: sizes(30) }}
+          style={{ width: sizes(130), height: sizes(30) }}
           source={IMAGES?.logo}
           resizeMode={FastImage.resizeMode.contain}
         ></FastImage>

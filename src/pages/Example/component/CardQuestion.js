@@ -50,7 +50,7 @@ const CardQuestion = ({ no, item, onPressYa, onPressTidak }) => {
           }}
         >
           <TextCustom
-            value={"See Answer"}
+            value={"See Detail"}
             textAlign={"center"}
             fontSize={sizes(14)}
             color={item?.answer === 1 ? COLOR?.white : COLOR?.primary}
