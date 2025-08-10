@@ -77,9 +77,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.camalino.kodegiri"
+    namespace "com.itmerdeka.kecegame"
     defaultConfig {
-        applicationId "com.camalino.kodegiri"
+        applicationId "com.itmerdeka.kecegame"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
