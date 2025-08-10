@@ -1,6 +1,6 @@
-import {StyleSheet, Text, View} from 'react-native';
-import React from 'react';
-import Router from './src/navigations/Router';
+import { StyleSheet, Text, View } from "react-native";
+import React from "react";
+import Router from "./src/navigations/Router";
 
 const App = () => {
   return <Router />;

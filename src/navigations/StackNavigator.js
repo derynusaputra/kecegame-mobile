@@ -1,10 +1,11 @@
-import {StyleSheet, Text, View} from 'react-native';
-import React from 'react';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import MainNavigator from './MainNavigator';
-import PageA from '../pages/Example/PageA';
-import PageB from '../pages/Example/PageB';
-import PageC from '../pages/Example/PageC';
+import { StyleSheet, Text, View } from "react-native";
+import React from "react";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import MainNavigator from "./MainNavigator";
+import PageA from "../pages/Example/PageA";
+import PageB from "../pages/Example/PageB";
+import PageC from "../pages/Example/PageC";
+import DetailAnswer from "@src/pages/Example/page/DetailAnswer";
 
 const Stack = createNativeStackNavigator();
 
@@ -14,8 +15,11 @@ const StackNavigator = () => {
       initialRouteName="Main"
       screenOptions={{
         headerShown: false,
-      }}>
+      }}
+    >
       <Stack.Screen name="Main" component={MainNavigator} />
+      <Stack.Screen name="DetailAnswer" component={DetailAnswer} />
+
       <Stack.Screen name="PageA" component={PageA} />
       <Stack.Screen name="PageB" component={PageB} />
       <Stack.Screen name="PageC" component={PageC} />
