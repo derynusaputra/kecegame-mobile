@@ -1,4 +1,4 @@
-package com.airfly
+package com.itmerdeka.kecegame
 
 import android.app.Application
 import com.facebook.react.PackageList
